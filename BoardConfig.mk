@@ -20,7 +20,7 @@ DEVICE_PATH := device/oppo/CPH1859
 
 BOARD_VENDOR := oppo
 
-# Bluetooth
+ # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/
 
 # Assertions
@@ -134,3 +134,7 @@ TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
 # Vndk
 BOARD_VNDK_VERSION := current
 PRODUCT_EXTRA_VNDK_VERSIONS := 28
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
