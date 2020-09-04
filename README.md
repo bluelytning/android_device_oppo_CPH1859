@@ -23,7 +23,6 @@ Device Tree for Realme 1. The 3GB variant has codename CPH1861 whereas the 4/6GB
 1. Selinux is permissive.
 2. Video codec issues in all Chromium based browser (minimal).
 3. VoLTE
-4. No face Unlock.
 
 ### Spec Sheet
 Feature | Specification
@@ -47,35 +46,3 @@ Release Date | May, 2018
 ## Device Picture
 
 ![Realme 1 (17061)](https://i.gadgets360cdn.com/products/large/1532074799_635_Realme_1_db_normal_ndtv.jpg "Realme 1")
-
-
-## Getting Started with LineageOS ##
----------------
-
-To get started with ROM compiling, you'll need to get
-familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
-
-# repo init
-
-To initialize your local repository using the LineageOS trees to build ROM, use a command like this:
-
-    repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
-
-# repo sync
-
-Then to sync up:
-
-    repo sync
-
-# ccache and jack
-
-Using 50GB ccache and 15GB RAM (for jack).
-
-    export USE_CCACHE=1; export USE_CCACHE_EXEC=$(command -v ccache); ccache -M 50G; export ANDROID_JACK_VM_ARGS="-Xmx15g -Dfile.encoding=UTF-8 -XX:+TieredCompilation";
-
-## To Build ##
----------------
-
-Build the LineageOS ROM using below command.
-
-    . build/envsetup.sh; breakfast CPH1859; brunch lineage_CPH1859-userdebug -j8

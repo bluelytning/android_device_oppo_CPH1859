@@ -53,7 +53,7 @@ PRODUCT_COPY_FILES += \
 
 # OPScreenRecorder
  PRODUCT_PACKAGES += \
-     OPScreenRecorder
+    OPScreenRecorder
 
 # Misc
 PRODUCT_COPY_FILES += \
