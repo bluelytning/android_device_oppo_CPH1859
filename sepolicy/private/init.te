@@ -1,8 +1,4 @@
-#This is in Android 8.0, but not 8.1
-domain_trans(init, rootfs, adbd)
-
-allow vendor_init vendor_init:capability { sys_module };
-allow init rootfs:lnk_file setattr;
-
-dontaudit init kernel:security setcheckreqprot;
-dontaudit init kernel:system module_request;
+allow init vendor_configs_file:{ dir file } mounton;
+allow init vendor_overlay_file:{ dir file } mounton;
+allow init vendor_file:file { execute };
+allow init unlabeled:file { execute execute_no_trans };
